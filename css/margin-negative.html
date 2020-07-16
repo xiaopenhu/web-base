@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>margin 负值</title>
+    <style type="text/css">
+        .float-left {
+            float: left;
+        }
+        .container .border-blue {
+            width: 100px;
+            height: 100px;
+            border: 1px solid blue;
+        }
+        .container .border-red {
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+        }
+        .clearfix:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    
+    <p>margin-top负值：元素向上移动</p>
+    <div class="container">
+        <div class="border-blue" style="margin-top: -20px;">
+            this is item 1
+        </div>
+        <div class="border-red">
+            this is item 2
+        </div>
+    </div>
+    <p>margin-bottom负值：下方元素上移，自身不受影响</p>
+    <div class="container">
+        <div class="border-blue" style="margin-bottom: -20px;">
+            item 1
+        </div>
+        <div class="border-red">
+            item 2
+        </div>
+    </div>
+
+    <p>margin-left负值：元素向左移动</p>
+    <div class="container clearfix">
+        <div class="border-blue float-left" style="margin-left: -20px;">
+            item 3
+        </div>
+        <div class="border-red float-left">
+            item 4
+        </div>
+    </div>
+    <p>margin-right负值：右方元素左移，自身不受影响</p>
+    <div class="container clearfix">
+        <div class="border-blue float-left" style="margin-right: -20px;">
+            item 3
+        </div>
+        <div class="border-red float-left">
+            item 4
+        </div>
+    </div>
+
+</body>
+</html>
