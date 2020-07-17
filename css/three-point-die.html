@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex实现三点的骰子</title>
+    <style>
+        .main {
+            height: 400px;
+            width: 400px;
+            background: pink;
+            display: flex;
+            justify-content: space-between;
+        }
+        .item {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="item" style="align-self:flex-start;"></div>
+    <div class="item" style="align-self:center;"></div>
+    <div class="item" style="align-self:flex-end;"></div>
+</div>
+</body>
+</html>
