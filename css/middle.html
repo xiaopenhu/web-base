@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>垂直对齐</title>
+    <title>水平垂直居中</title>
     <style type="text/css">
         .container {
             border: 1px solid #ccc;
@@ -12,12 +12,15 @@
             padding: 10px;
             height: 200px;
         }
+
         .item {
             background-color: #ccc;
         }
 
-        .container-1{
+        .container-1 {
+            /*文字水平居中*/
             text-align: center;
+            /*line-height实现垂直居中，要和高度一致*/
             line-height: 200px;
             height: 200px;
         }
@@ -25,22 +28,24 @@
         .container-2 {
             position: relative;
         }
+
         .container-2 .item {
-            width: 300px;
-            height: 100px;
+            width: 500px;
+            height: 150px;
             position: absolute;
             left: 50%;
-            margin-left: -150px;
+            margin-left: -250px;
             top: 50%;
-            margin-top: -50px;
+            margin-top: -75px;
         }
 
         .container-3 {
             position: relative;
         }
+
         .container-3 .item {
-            width: 200px;
-            height: 80px;
+            width: 500px;
+            height: 150px;
             position: absolute;
             left: 50%;
             top: 50%;
@@ -50,9 +55,10 @@
         .container-4 {
             position: relative;
         }
+
         .container-4 .item {
-            width: 100px;
-            height: 50px;
+            width: 500px;
+            height: 150px;
             position: absolute;
             top: 0;
             left: 0;
@@ -63,26 +69,44 @@
     </style>
 </head>
 <body>
-    <div class="container container-1">
-        <span>一段文字</span>
-    </div>
+<div class="container container-1">
+    <span>container-1：text-align&&line-height</span>
+</div>
 
-    <div class="container container-2">
-        <div class="item">
-            this is item
-        </div>
+<div class="container container-2">
+    <div class="item">
+        <pre>
+            position: absolute;
+            left: 50%;
+            margin-left: -250px;
+            top: 50%;
+            margin-top: -75px;
+        </pre>
     </div>
+</div>
 
-    <div class="container container-3">
-        <div class="item">
-            this is item
-        </div>
+<div class="container container-3">
+    <div class="item">
+        <pre>
+            container-3：position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%)
+        </pre>
     </div>
+</div>
 
-    <div class="container container-4">
-        <div class="item">
-            this is item
-        </div>
+<div class="container container-4">
+    <div class="item">
+        <pre>
+            container-4：position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+        </pre>
     </div>
+</div>
 </body>
 </html>
