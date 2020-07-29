@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>class的继承写法</title>
+</head>
+<body>
+<script>
+    // 父类People
+    class People {
+        constructor(name) {
+            this.name = name
+        }
+        eat() {
+            console.log(`${this.name} eat something`)
+        }
+    }
+
+    // 子类Student
+    class Student extends People {
+        constructor(name, number) {
+            super(name)
+            this.number = number
+        }
+        sayHi() {
+            console.log(`姓名 ${this.name} 学号 ${this.number}`)
+        }
+    }
+
+    // 子类Teacher
+    class Teacher extends People {
+        constructor(name, major) {
+            super(name)
+            this.major = major
+        }
+        teach() {
+            console.log(`${this.name} 教授 ${this.major}`)
+        }
+    }
+
+    // Student实例
+    const xialuo = new Student('夏洛', 100)
+    console.log(xialuo.name)
+    console.log(xialuo.number)
+    xialuo.sayHi()
+    xialuo.eat()
+
+    // Teacher实例
+    const wanglaoshi = new Teacher('王老师', '语文')
+    console.log(wanglaoshi.name)
+    console.log(wanglaoshi.major)
+    wanglaoshi.teach()
+    wanglaoshi.eat()
+</script>
+</body>
+</html>
