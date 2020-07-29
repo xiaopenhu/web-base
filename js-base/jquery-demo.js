@@ -30,7 +30,7 @@ jQuery.prototype.dialog = function (info) {
     alert(info)
 }
 
-// “造轮子”
+// “造轮子”：继承原有的对象，增加新的功能
 class myJQuery extends jQuery {
     constructor(selector) {
         super(selector)
